@@ -1,0 +1,13 @@
+Source: https://www.instagram.com/jens.heitmann/reel/DWooSQkkQe2/
+Author: Jens Heitmann (@jens.heitmann)
+Duration: 50.689s
+Language: en
+Transcribed: 2026-05-10 via openai-whisper base model
+
+CAPTION:
+You can make Claude Code your Content Strategist that scans every platform, analyzes top creators, and generates personalized viral scripts automatically. Here's how I'm doing it.
+
+#claudecode #claude #aitools #vibemarketing
+
+TRANSCRIPT:
+I fully delegate out my short form content ideas to my Claude Code. Here's the system I built and then the three step process of how it gets me the ideas to video. I created a project in my Claude Code, which is called my Content Radar. And the main skill of this is called a Pulse Check. And it does a pulse across all social media platforms for current trending topics or ideas that are currently popular on the internet. Next, I have those trending topics analyzed against something I call Creator Packs, which are groupings of creators that might have already covered those topics to see how they performed and how the audience reacted to them. After validation states, I will use my skills that I built, which is my ID and Make Viral skill, which will create the content in my voice and for my script. And then also apply hooks and storytelling that are viral, respectively. Now, it does a good bit more, but these are the core systems that get my videos off the ground.

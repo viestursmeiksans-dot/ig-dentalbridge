@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DentalBridge listing slide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      body {
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+      .slide {
+        width: 1080px;
+        height: 1350px;
+      }
+    </style>
+  </head>
+  <body class="bg-neutral-50">
+    <!-- Slot variables get replaced at render-time by carousels/render.js -->
+    <div id="slide" class="slide flex flex-col"
+         data-kind="{{KIND}}">
+      <!-- HEADER -->
+      <div class="flex items-center justify-between px-16 pt-16">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#0d9488]"></div>
+          <span class="text-neutral-900 font-semibold text-xl">Drömleendet</span>
+        </div>
+        <span class="text-neutral-500 text-sm font-medium uppercase tracking-widest">
+          {{SLIDE_INDEX}} / {{SLIDE_TOTAL}}
+        </span>
+      </div>
+
+      <!-- BODY -->
+      <div class="flex-1 flex flex-col justify-center px-16">
+        <p class="text-[#0d9488] text-sm font-semibold uppercase tracking-[0.25em] mb-6">
+          {{EYEBROW}}
+        </p>
+        <h1 class="text-neutral-900 font-bold text-7xl leading-[1.05] tracking-tight mb-10 max-w-[820px]">
+          {{HEADLINE}}
+        </h1>
+        <p class="text-neutral-600 text-2xl leading-relaxed max-w-[760px]">
+          {{BODY}}
+        </p>
+      </div>
+
+      <!-- FOOTER / CTA -->
+      <div class="px-16 pb-16">
+        <div class="flex items-center justify-between border-t border-neutral-200 pt-8">
+          <span class="text-neutral-500 text-lg">{{FOOTER_LEFT}}</span>
+          <span class="inline-flex items-center gap-2 bg-neutral-900 text-white text-base font-semibold px-6 py-3 rounded-full">
+            {{CTA}} →
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

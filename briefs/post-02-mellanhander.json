@@ -1,0 +1,45 @@
+{
+  "name": "post-02-mellanhander",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "Det dolda priset",
+      "headline": "Din krona kostar 4 000 kr att tillverka.",
+      "body": "Du betalar 80 000. Vart tar resten vägen? Här är de fyra mellanhänderna mellan dig och ditt nya leende.",
+      "footer_left": "Svep →",
+      "cta": "Visa mig"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Mellanhand 1",
+      "headline": "Tandtekniska laboratoriet.",
+      "body": "Det är här din krona faktiskt tillverkas. Material och arbete: 4 000–8 000 kr. Allt över det är påslag — inte hantverk.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Mellanhand 2",
+      "headline": "Distributören.",
+      "body": "Stora kedjor som säljer in material till svenska kliniker. Påslag innan kronan ens lämnar lagret: 30–50%.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Mellanhand 3",
+      "headline": "Klinikens marginal.",
+      "body": "Hyra. Personal. Vinst. Lägger till ytterligare 40–60% på slutpriset. Det här är där det mesta försvinner.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "cta",
+      "eyebrow": "Mellanhand 4",
+      "headline": "Marknadsföringen som hittade dig.",
+      "body": "Annonser, sökmotorer, mäklarsajter. Den sista delen av räkningen — innan du ens har träffat tandläkaren.",
+      "footer_left": "@dromleendet",
+      "cta": "Få jämförelsen"
+    }
+  ]
+}

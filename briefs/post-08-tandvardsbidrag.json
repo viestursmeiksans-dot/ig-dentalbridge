@@ -1,0 +1,45 @@
+{
+  "name": "post-08-tandvardsbidrag",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "Tandvårdsbidraget",
+      "headline": "600 kr om året. Är det 'gratis'?",
+      "body": "Försäkringskassan kallar det stöd. Men vad döljer sig bakom siffran — och vem betalar resten?",
+      "footer_left": "Svep →",
+      "cta": "Visa mig"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Verklighet 1",
+      "headline": "Bidraget täcker en undersökning.",
+      "body": "Inte en behandling. Inte en krona. Inte ett implantat. Bara att tandläkaren tittar i din mun.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Verklighet 2",
+      "headline": "Högkostnadsskyddet börjar på 3 000 kr.",
+      "body": "Allt under det betalar du själv — 100%. Taket: 15 000 kr per år. Däröver subventioneras 50–85%.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Verklighet 3",
+      "headline": "Implantat ingår inte alls.",
+      "body": "Tandvårdsstödet ger 0 kr i bidrag för estetisk eller implantatbaserad behandling. Du betalar fullt pris.",
+      "footer_left": "Svep →",
+      "cta": "Nästa"
+    },
+    {
+      "kind": "cta",
+      "eyebrow": "Det är därför",
+      "headline": "Svenskar reser utomlands för sitt nya leende.",
+      "body": "Med rätt klinik och rätt vägledning sparar du 60–80% — på samma behandling, samma material, samma resultat.",
+      "footer_left": "@dromleendet",
+      "cta": "Få guiden"
+    }
+  ]
+}

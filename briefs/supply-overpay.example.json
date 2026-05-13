@@ -1,0 +1,45 @@
+{
+  "name": "supply-overpay",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "Hidden cost",
+      "headline": "78% of EU dental clinics overpay for supplies.",
+      "body": "Most don't know it. Brokers, fragmented suppliers, and old habits keep margins thin.",
+      "footer_left": "Swipe →",
+      "cta": "Why this happens"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Reason 1",
+      "headline": "Fragmented suppliers, opaque pricing.",
+      "body": "Same composite, four prices, three currencies. Nobody benchmarks across borders — until now.",
+      "footer_left": "Swipe →",
+      "cta": "Next"
+    },
+    {
+      "kind": "body",
+      "eyebrow": "Reason 2",
+      "headline": "Brokers keep the spread.",
+      "body": "Distributors mark up 15–40% before the box even arrives. A clinic ordering monthly bleeds €12k+ a year.",
+      "footer_left": "Swipe →",
+      "cta": "Next"
+    },
+    {
+      "kind": "solution",
+      "eyebrow": "What we do",
+      "headline": "DentalBridge benchmarks every order.",
+      "body": "We compare your invoices against EU-wide pricing data and route you to verified suppliers — no broker layer.",
+      "footer_left": "Last slide →",
+      "cta": "Get a free audit"
+    },
+    {
+      "kind": "cta",
+      "eyebrow": "Free for the first 100 clinics",
+      "headline": "Send us last month's invoice. We'll show you the leak.",
+      "body": "Reply to this post or DM 'AUDIT' — we'll send the report within 48 hours.",
+      "footer_left": "dentalbridge.eu",
+      "cta": "DM us"
+    }
+  ]
+}

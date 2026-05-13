@@ -1,0 +1,5 @@
+node_modules/
+outputs/reels/*.mp4
+outputs/carousels/*/
+.DS_Store
+.env
