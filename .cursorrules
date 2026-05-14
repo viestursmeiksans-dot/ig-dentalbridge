@@ -1,0 +1,121 @@
+# Drömleendet / Dental Bridge — Remotion content pipeline
+
+These rules govern AI-assisted edits to this repository. Read every section before suggesting changes.
+
+## What this repo is
+
+Swedish-language Instagram content pipeline for the Drömleendet brand (handle: @dromleendet), targeting Swedes interested in dental tourism to Riga.
+
+- **Reels:** programmatic 1080×1920 Remotion compositions (8 total, registered in `src/Root.tsx`)
+- **Carousels:** Puppeteer + Tailwind, 1080×1350 (rendered via `carousels/render.js`)
+- **Branding:** teal `#0d9488`, cream `#fef3c7`, near-black `#0a0a0a`, Inter typeface
+
+## Who is asking you to make changes
+
+The primary editor of this repo is a Swedish-speaking content collaborator who is **not a developer**. They may ask things like:
+
+- "Change the price in Reel 5 from 28 000 kr to 30 000 kr"
+- "Move the text higher on screen"
+- "Make Scene 1 last a bit longer"
+- "Add a new reel about veneers"
+
+Translate plain-language requests into precise code edits. **Always show the diff before applying.** Let them accept or reject in Cursor's UI.
+
+## ❌ NEVER edit these files without explicit user permission
+
+These contain verified, sourced data from May 2026. Edits could create false marketing claims and legal exposure.
+
+| File | What it locks |
+|---|---|
+| `src/shared/brand.ts` | EUR→SEK rate (locked at **11.4**), Dental Art prices, Försäkringskassan brackets, Grand Poet hotel rate, airBaltic schedule, Riga facts |
+| `research/transcript-DWooSQkkQe2.txt` | Source transcript — do not modify |
+| `research/launch-dromleendet.md` | Locked brand voice rules — read but do not rewrite |
+
+If asked to change anything in these files, **STOP and respond:**
+
+> "This file contains verified May 2026 data. Editing it could create incorrect marketing claims. Please confirm with Viesturs Meiksans before changing it, and have him verify the new source."
+
+## ❌ NEVER use these phrases in Swedish copy
+
+Documented in `research/launch-dromleendet.md`. Using them will damage the brand.
+
+- **"Det perfekta leendet"** — title of a Sveriges Radio P3 investigative piece exposing a Swedish dental chain's malpractice. Searching the phrase surfaces consumer-protection journalism. Brand-poison.
+- **"Riskfritt"** / **"Smärtfritt"** / **"100% säkert"** / **"Garanterat"** — `marknadsföringslagen` risk for medical content.
+- **"Hollywood smile"** — degraded by every dental tourism marketer; signals low-quality clinic.
+- **Comparing specific named clinics negatively** — defamation risk in Sweden.
+
+If the user accidentally proposes one of these, flag it and suggest a replacement.
+
+## ✅ Swedish copy voice rules
+
+- **Second-person singular:** `du`, `ditt`, `dina`. Never `ni` (too formal). Never `man` (too distant).
+- **Numbers-driven, specific.** One concrete number per sentence beats five vague claims.
+- **Mildly contrarian on hidden costs:** "vad ingen säger högt", "siffrorna kliniken inte visar".
+- **Empathetic** to the shame around hiding teeth.
+- **Direct, calm.** No fake urgency ("endast 3 platser kvar!").
+- Max **2 emojis** per post.
+- **Swedish only** — never mix English and Swedish in copy.
+
+## Where to find common things
+
+| Want to edit… | Look in… |
+|---|---|
+| A reel's animations or text | `src/compositions/<ReelName>.tsx` |
+| A reel's total length | `src/Root.tsx` → `durationInFrames` |
+| Brand colors | `src/shared/brand.ts` → `COLORS` *(locked — ask before changing)* |
+| Shared outro (D wordmark + EU badge) | `src/shared/OutroScene.tsx` |
+| Carousel template | `carousels/templates/listing.html` |
+| Carousel content briefs | `briefs/*.json` |
+| Profile picture | `branding/profile-picture.html` |
+
+## Edit workflow
+
+**When asked to change a reel:**
+1. Identify the exact file and line range.
+2. **Show the diff before applying** — never edit silently.
+3. After applying, remind: "Preview at http://localhost:3000 in the Studio. If it looks wrong, press Ctrl+Z to undo."
+4. **Do NOT auto-render MP4s.** Final rendering is `npx remotion render <id> out/<id>.mp4` — only the user should trigger it.
+
+**When asked to change Swedish copy:**
+1. Check the forbidden-phrase list above first.
+2. Propose the edit.
+3. If unsure about tone, ask one short question: "Should this be more direct or more aspirational?"
+
+**When asked to add a new reel:**
+1. Confirm structure: length in frames, 1080×1920, 30fps.
+2. Create a new file in `src/compositions/`.
+3. Register in `src/Root.tsx` with id format `<NN>-<Name>` (e.g. `08-NewReel`).
+4. Import shared brand tokens: `import { COLORS, SPRINGS, fontFamily } from '../shared/brand'`.
+5. End every reel with the shared outro: `<Sequence from={X} durationInFrames={45}><OutroScene /></Sequence>`.
+
+## Git workflow
+
+- ✅ Commit changes after applying them, with a clear message.
+- ❌ **NEVER push to remote unless the user explicitly says "push it".**
+- ❌ Never force-push (`git push --force`).
+- ❌ Never edit `.gitignore` to start committing `node_modules/` or `outputs/*/`.
+
+## Render specs (do not change without permission)
+
+- **All reels:** 1080×1920, 9:16, **30fps**
+- **All carousels:** 1080×1350, 4:5
+- **Font:** Inter weights **700** and **900** (loaded via `@remotion/google-fonts/Inter` in `src/shared/brand.ts`)
+- **Outputs:** `out/` for reels (gitignored), `outputs/carousels/<name>/` for carousels
+
+## Tech stack — do not swap
+
+- Package manager: **npm** (not pnpm, not yarn). Lockfile is `package-lock.json`.
+- React: **18.x** (locked).
+- Remotion: **^4.0.0** (locked).
+- Don't add heavy dependencies without asking.
+
+## Response style
+
+- **Concise.** Show file paths and line numbers, not lengthy explanations.
+- When you don't know something, say "I don't know" — never guess about prices, dates, or sources.
+- If a request is ambiguous, ask one short question before editing.
+- **Default language:** respond in the same language the user prompts you in (Swedish or English).
+
+## When in doubt
+
+Stop and ask. The user is non-technical — a wrong edit they accept by default is worse than asking one clarifying question.
