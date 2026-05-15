@@ -19,7 +19,7 @@ import { OutroScene } from '../shared/OutroScene';
 
 // ============================================================
 // REEL #1: "PRICE REVEAL — IMPLANT"
-// 1080x1920, 30fps, 360 frames = 12 seconds
+// 1080x1920, 30fps, 375 frames = 12.5 seconds
 // ------------------------------------------------------------
 // Real Dental Art price: Alpha Bio implant (€700) + metal-ceramic crown (€800) = €1500 ≈ 17 100 SEK
 // Swedish reference: ~28 000 SEK for a full implant + crown private clinic
@@ -76,13 +76,14 @@ const SwedishContextScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          bottom: 200,
-          left: 0,
-          right: 0,
+          inset: 0,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           textAlign: 'center',
           fontFamily,
           fontWeight: 700,
-          fontSize: 64,
+          fontSize: 80,
           color: COLORS.white,
           opacity: captionOpacity,
           transform: `translateY(${captionY}px)`,
@@ -128,7 +129,7 @@ const SwedishPriceScene: React.FC = () => {
         style={{
           fontFamily,
           fontWeight: 900,
-          fontSize: 220,
+          fontSize: 190,
           color: COLORS.white,
           letterSpacing: '-0.04em',
           transform: `scale(${landScale})`,
@@ -141,7 +142,7 @@ const SwedishPriceScene: React.FC = () => {
         style={{
           fontFamily,
           fontWeight: 700,
-          fontSize: 48,
+          fontSize: 72,
           color: COLORS.swedishYellow,
           marginTop: 20,
           letterSpacing: '0.1em',
@@ -240,17 +241,18 @@ const RigaContextScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          bottom: 200,
-          left: 0,
-          right: 0,
+          inset: 0,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           textAlign: 'center',
           fontFamily,
           fontWeight: 700,
           fontSize: 64,
-          color: COLORS.white,
+          color: COLORS.red,
           opacity: captionOpacity,
           transform: `translateY(${captionY}px)`,
-          textShadow: '0 4px 24px rgba(0,0,0,0.5)',
+          textShadow: '0 4px 24px rgba(255,255,255,0.35)',
           letterSpacing: '-0.02em',
           padding: '0 40px',
         }}
@@ -292,7 +294,7 @@ const RigaPriceScene: React.FC = () => {
         style={{
           fontFamily,
           fontWeight: 900,
-          fontSize: 220,
+          fontSize: 190,
           color: COLORS.white,
           letterSpacing: '-0.04em',
           transform: `scale(${landScale})`,
@@ -322,7 +324,7 @@ const RigaPriceScene: React.FC = () => {
 };
 
 // ============================================================
-// SCENE 6: Strikethrough (7.0 - 8.5s = 210-255f)
+// SCENE 6: Strikethrough (7.0 - 9.0s = 210-270f)
 // ============================================================
 const StrikethroughScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -525,13 +527,13 @@ export const PriceReveal: React.FC = () => {
       <Sequence from={165} durationInFrames={45}>
         <RigaPriceScene />
       </Sequence>
-      <Sequence from={210} durationInFrames={45}>
+      <Sequence from={210} durationInFrames={60}>
         <StrikethroughScene />
       </Sequence>
-      <Sequence from={255} durationInFrames={60}>
+      <Sequence from={270} durationInFrames={60}>
         <SavingsStampScene />
       </Sequence>
-      <Sequence from={315} durationInFrames={45}>
+      <Sequence from={330} durationInFrames={45}>
         <OutroScene />
       </Sequence>
     </AbsoluteFill>

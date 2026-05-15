@@ -25,11 +25,11 @@ export const Root: React.FC = () => {
         defaultProps={defaultStatRevealProps}
       />
 
-      {/* Reel 1 — 12s — Price reveal: implant Sweden vs Riga */}
+      {/* Reel 1 — 12.5s — Price reveal: implant Sweden vs Riga */}
       <Composition
         id="01-PriceReveal-Implant"
         component={PriceReveal}
-        durationInFrames={360}
+        durationInFrames={375}
         fps={30}
         width={1080}
         height={1920}
